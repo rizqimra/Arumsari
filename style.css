@@ -1,6 +1,8 @@
 :root {
   --primary: #face55;
   --bg: #7dbba9;
+  --secondary: #122727;
+  --text: #fff;
 }
 
 * {
@@ -15,9 +17,11 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
-  color: white;
+  color: var(--text);
+  height: 3000px;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -28,6 +32,7 @@ body {
   left: 0;
   right: 0;
   z-index: 999;
+  background-color: var(--bg);
 }
 
 .navbar .nav-brand {
@@ -36,12 +41,18 @@ body {
   gap: 0.5rem;
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
+  color: var(--text);
+}
+
+.navbar .nav-brand img {
+  width: 2.5rem;
+  height: auto;
+  aspect-ratio: 1/1;
 }
 
 .navbar .nav-links a {
   display: inline-block;
-  color: white;
+  color: var(--text);
   font-size: 1.3rem;
   padding: 0 0.5rem;
   transition: all 0.2s ease;
@@ -75,9 +86,65 @@ body {
 .bar {
   width: 1.5rem;
   height: 0.2rem;
-  background-color: white;
+  background-color: var(--text);
   margin: 0.2rem 0;
 }
+/* Navbar End */
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  padding: 0 7%;
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/bg-desktop.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.hero .content .cta {
+  background-color: var(--primary);
+  border-radius: 3rem;
+  width: max-content;
+  padding: 1.25rem;
+  color: black;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.hero .content .cta:hover {
+  background-color: var(--secondary);
+  color: var(--text);
+}
+/* Hero End */
+
+/* About */
+.about {
+  background-color: var(--secondary);
+}
+/* About End */
 
 /* RESPONSIVE DESIGN */
 
@@ -94,6 +161,7 @@ body {
     font-size: 62.5%;
   }
 
+  /* Navbar */
   .hamburger {
     display: flex;
     flex-direction: column;
@@ -107,9 +175,8 @@ body {
     right: -100%;
     width: 40%;
     height: 100vh;
-    background-color: white;
+    background-color: var(--text);
     transition: all 1s ease;
-    opacity: 0.8;
   }
 
   .navbar .nav-links.active {
@@ -131,6 +198,7 @@ body {
   .navbar .nav-links a:hover::after {
     transform: scaleX(0.3);
   }
+  /* Navbar End */
 }
 
 /* Mobile Phone */
@@ -139,6 +207,7 @@ body {
     font-size: 55%;
   }
 
+  /* Navbar */
   .hamburger {
     display: flex;
     flex-direction: column;
@@ -152,9 +221,8 @@ body {
     right: -100%;
     width: 40%;
     height: 100vh;
-    background-color: white;
+    background-color: var(--text);
     transition: all 1s ease;
-    opacity: 0.8;
   }
 
   .navbar .nav-links.active {
@@ -176,4 +244,5 @@ body {
   .navbar .nav-links a:hover::after {
     transform: scaleX(0.5);
   }
+  /* Navbar End */
 }
