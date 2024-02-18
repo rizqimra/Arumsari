@@ -19,6 +19,7 @@ body {
   background-color: var(--bg);
   color: var(--text);
   height: 3000px;
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -93,6 +94,7 @@ body {
 
 /* Hero */
 .hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -106,6 +108,10 @@ body {
   flex-direction: column;
   gap: 2.5rem;
   align-items: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  padding-right: 14%;
+  width: 100%;
 }
 
 .hero::after {
@@ -142,7 +148,54 @@ body {
 
 /* About */
 .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
+  position: absolute;
+  top: 170%;
+  width: 100vw;
   background-color: var(--secondary);
+  padding: 2rem 7%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.about .about-text {
+  display: flex;
+  gap: 10rem;
+}
+
+.about h1 {
+  padding: 1.5rem 0;
+  font-size: 5rem;
+}
+
+.about .description {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.about .facilities {
+  display: flex;
+  gap: 2rem;
+}
+
+.about .facilities .card {
+  border-radius: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(42, 83, 83, 0.5);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.about .facilities h4 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.about .facilities p {
+  font-size: 1rem;
+  font-weight: lighter;
 }
 /* About End */
 
@@ -153,6 +206,12 @@ body {
   html {
     font-size: 75%;
   }
+
+  /* Hero */
+  .hero::after {
+    background-image: url(assets/bg-laptop.webp);
+  }
+  /* Hero End */
 }
 
 /* Tablet */
@@ -199,6 +258,26 @@ body {
     transform: scaleX(0.3);
   }
   /* Navbar End */
+
+  /* Hero */
+  .hero::after {
+    background-image: url(assets/bg-tablet.webp);
+  }
+  /* Hero End */
+
+  /* About */
+  .about {
+    font-size: 1.5rem;
+  }
+
+  .about h1 {
+    font-size: 3rem;
+  }
+
+  .about .description {
+    font-size: 1.25rem;
+  }
+  /* About End */
 }
 
 /* Mobile Phone */
@@ -245,4 +324,24 @@ body {
     transform: scaleX(0.5);
   }
   /* Navbar End */
+
+  /* Hero */
+  .hero::after {
+    background-image: url(assets/bg-phone.webp);
+  }
+  /* Hero End */
+
+  /* About */
+  .about {
+    font-size: 1.5rem;
+  }
+
+  .about h1 {
+    font-size: 3rem;
+  }
+
+  .about .description {
+    font-size: 1.25rem;
+  }
+  /* About End */
 }

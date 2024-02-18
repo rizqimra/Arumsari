@@ -19,5 +19,5 @@ window.addEventListener("scroll", () => {
   let value = window.scrollY;
   let text = document.querySelector(".hero .content");
 
-  text.style.marginTop = value * 2.4 + "px";
+  text.style.marginTop = value * 2 + "px";
 });
