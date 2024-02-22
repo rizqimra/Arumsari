@@ -125,10 +125,6 @@ body {
   width: 100%;
 }
 
-.hero .content::backdrop {
-  filter: blur(10px);
-}
-
 .hero::after {
   content: "";
   display: block;
@@ -168,13 +164,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
   gap: 5rem;
-  top: 170%;
   width: 100vw;
   background-color: var(--secondary);
   padding: 2rem 7%;
   font-size: 2rem;
   font-weight: bold;
-  /* scroll-margin: 5rem; */
+  position: relative;
+  z-index: 1;
 }
 
 #about .about-text {
@@ -237,11 +233,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   background-color: var(--secondary);
-  top: 230%;
   width: 100vw;
   padding: 2rem 7%;
-  /* scroll-margin: 5rem; */
+  z-index: 1;
 }
 
 #gallery h1 {
